@@ -24,13 +24,14 @@ def insertion_sort(A): # A is the input parameter as well as output parameter
 
 def main(args):
     print('arguments to program =>', ' '.join(args))
-    A = list(map(int, args))
+    # A = list(map(int, args))
+    A = list(map(int, input().split(" ")))
 
-    print('A before sorting =>', ' '.join(map(str, A)))
+    # print('A before sorting =>', ' '.join(map(str, A)))
 
     insertion_sort(A)
 
-    print('A after sorting =>', ' '.join(map(str, A)))
+    # print('A after sorting =>', ' '.join(map(str, A)))
 
 if __name__ == "__main__":
     main(argv[1:])
