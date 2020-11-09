@@ -55,5 +55,10 @@
         "thread": "cpp",
         "cinttypes": "cpp",
         "typeinfo": "cpp"
-    }
+    },
+    "python.pythonPath": "/data/git/.virtualenvs/pyenv3.8.2/bin/python",
+    "python.analysis.memory.keepLibraryAst": true,
+    "python.analysis.memory.keepLibraryLocalVariables": true,
+    "python.autoComplete.addBrackets": true,
+    "python.venvPath": "/data/git/.virtualenvs/"
 }

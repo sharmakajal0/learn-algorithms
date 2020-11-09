@@ -13,14 +13,16 @@ def compress(search, look_ahead):
     search_pointer = search_length
     for i in range(0, search_length):
         length = 0
+        offset = 1
         while buffer[i + length] == buffer[search_pointer + length]:
             length += 1
+            print(len(buffer))
             if search_pointer + length == len(buffer):
                 length -= 1
             if i + length >= search_pointer:
                 break
         if length > best_length:
-            best_offset = i
+            best_offset = i + offset
             best_length = length
     return (best_offset, best_length, buffer[search_pointer+best_length])
 
@@ -30,7 +32,8 @@ input_string = list(INPUT_STRING)
 search_iterator = 0
 iterator = 0
 max_search = int(input("Enter the size of search buffer"))
-max_look_ahead = int(input("Enter the size of look ahead buffer"))
+max_look_ahead = int(input("\nEnter the size of look ahead buffer"))
+print()
 count = 1
 while(iterator < len(input_string)):
     search = input_string[search_iterator:iterator]
